@@ -48,11 +48,12 @@ $ pip install -r requirements.txt
 
 * GUI Window  
 
-  <center><img src='./imgs/GUI.png' width="500" height="139"></center><br>
+  <center><img src='./imgs/GUI.png' width="500" height="139"></center><br>  
+
   * Run/pause the classifier by '시작'/'중지' button
-    * Action classifier's result will be shown 
-  * Change configuration by '설정' button (To be updated)
-  * View web-cam image by '카메라' button  
+    * If '시작' button pushed, action classifier's result will be shown 
+  * Change configuration by '설정' button (To be updated)<br>
+  * View web-cam image by '카메라' button<br>
    
   
 
