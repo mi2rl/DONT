@@ -2,9 +2,9 @@
 <center><img src='./imgs/logo.png' width="440" height="150"></center><br>
   
 
-# Do Not Touch Your Face (DNTYF)
+# Do Not Touch Your Face (DONT)
 
-DNTYF is MI2RL's software system to prevent SARS-CoV-2
+DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 
 
 ### Ver.0.2 Release !
