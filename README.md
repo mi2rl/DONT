@@ -2,7 +2,7 @@
 <center><img src='./imgs/logo.png' width="440" height="150"></center><br>
   
 
-# Do Not Touch Your Face (DONT)
+# DO Not Touch your face (DONT)
 
 DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 
