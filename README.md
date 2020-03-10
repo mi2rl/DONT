@@ -1,6 +1,6 @@
 # Do Not Touch Your Face (DNTYF)
 
-DNTYF is MI2RL's software system to prevent spreading SARS-CoV-2
+DNTYF is MI2RL's software system to prevent SARS-CoV-2
 
 
 ### Ver.0.2 Release !
