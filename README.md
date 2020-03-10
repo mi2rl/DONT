@@ -1,6 +1,7 @@
-![logo](./imgs/logo.png)
+
+<center><img src='./imgs/logo.png' width="440" height="150"></center><br>
   
-  
+
 # Do Not Touch Your Face (DNTYF)
 
 DNTYF is MI2RL's software system to prevent SARS-CoV-2
