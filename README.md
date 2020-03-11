@@ -95,40 +95,39 @@ $ pip install -r requirements.txt
     
 * **Action Classification Network**
   * I3D Network (https://github.com/deepmind/kinetics-i3d)   
-    * Additional settings
-        * Training phase
-            * The number of  frames in each stack for 3D CNN : 16
-            * Data augmentation
-              * Step in frames between each clip : 4
-              * Color distortion
-              * Rotation
-            
-        * Inference Phase
-          * The number of  frames in each stack for 3D CNN : 24
-            
+    * Training phase
+        * The number of  frames in each stack for 3D CNN : 16
+        * Data augmentation
+          * Step in frames between each clip : 4
+          * Color distortion
+          * Rotation
+        
+    * Inference Phase
+      * The number of  frames in each stack for 3D CNN : 24
+        
   
 * **H/W specification**
-* Test specification.
-  
-  
-    * GPU : Geforce GTX 960 4GB
-    * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-    * OS : Linux Ubuntu 18.04
-    * Inference
-    
-      * 0.07~0.085 sec on GPU
-      * 1.4~1.5 sec on CPU
-      * CPU usage  ≈ 35%  
-      * GPU memory usage ≈  1.1GB
-        
-    
-  * Minimum specification
-  
-    
-    * GPU : Geforce GTX 960 4GB
-    * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-    * OS : Linux / Windows  
+
+    * Test specification.
       
+      * GPU : Geforce GTX 960 4GB
+        * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
+        * OS : Linux Ubuntu 18.04
+        * Inference
+        
+          * 0.07~0.085 sec on GPU
+          * 1.4~1.5 sec on CPU
+          * CPU usage  ≈ 35%  
+          * GPU memory usage ≈  1.1GB
+            
+        
+    * Minimum specification
+
+
+      * GPU : Geforce GTX 960 4GB
+      * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
+      * OS : Linux / Windows  
+        
 
 <br>
 
@@ -137,8 +136,7 @@ $ pip install -r requirements.txt
 **Confusion matrix : binary-class**
 <br>
 
-<p align="center"><img src='./imgs/result_confusion_binary.png' width="300" height="300"></p><br>
-<br>
+<p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
 
 ## Contact for Data Donation 
 

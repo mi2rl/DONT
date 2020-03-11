@@ -73,7 +73,7 @@ $ pip install -r requirements.txt
 
 ## 세부사항
 
-* **타당성**
+* **타당성/합리성(Rationale)**
     * A Study Quantifying the Hand-to-Face Contact Rate and Its Potential Application to Predicting Respiratory Tract Infection (https://www.tandfonline.com/doi/full/10.1080/15459620802003896)
     * Controlling the novel A (H1N1) influenza virus: don't touch your face! (https://www.journalofhospitalinfection.com/article/S0195-6701(09)00255-2/abstract)
     * Hand Hygiene Practices in a Neonatal Intensive Care Unit: A Multimodal Intervention and Impact on Nosocomial Infection (https://pediatrics.aappublications.org/content/114/5/e565.short)  
@@ -89,39 +89,38 @@ $ pip install -r requirements.txt
   
 * **Action Classification Network**
   * I3D Network (https://github.com/deepmind/kinetics-i3d)   
-    * 부가적인 세팅
-        * 학습과정
-            * 3D CNN에서 사용되는 스택당 이미지 갯수 : 16
-            * 데이터 증강 (Data augmentation)
-              * 클립 사이의 프레임 간격 : 4
-              * 색상 왜곡
-              * 임의 회전
-            
-        * 추론과정
-          * 3D CNN에서 사용되는 스택당 이미지 갯수 : 24
+    * 학습과정
+        * 3D CNN에서 사용되는 스택당 이미지 갯수 : 16
+        * 데이터 증강 (Data augmentation)
+          * 클립 사이의 프레임 간격 : 4
+          * 색상 왜곡
+          * 임의 회전
+        
+    * 추론과정
+      * 3D CNN에서 사용되는 스택당 이미지 갯수 : 24
   
 * **하드웨어 환경**
-* 테스트 환경
-  
-  
-    * GPU : Geforce GTX 960 4GB
-    * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-    * OS : Linux Ubuntu 18.04
-    * 추론 속도 및 자원 사용
-    
-      * 0.07~0.085 sec on GPU
-      * 1.4~1.5 sec on CPU
-      * CPU usage  ≈ 35%  
-      * GPU memory usage ≈  1.1GB
-        
-    
-  * 최소사양
-  
-    
-    * GPU : Geforce GTX 960 4GB
-    * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-    * OS : Linux / Windows  
+
+    * 테스트 환경
       
+      * GPU : Geforce GTX 960 4GB
+        * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
+        * OS : Linux Ubuntu 18.04
+        * 추론 속도 및 자원 사용
+        
+          * 0.07~0.085 sec on GPU
+          * 1.4~1.5 sec on CPU
+          * CPU usage  ≈ 35%  
+          * GPU memory usage ≈  1.1GB
+            
+      
+    * 최소사양
+
+
+      * GPU : Geforce GTX 960 4GB
+      * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
+      * OS : Linux / Windows  
+
 
 <br>
 
@@ -130,8 +129,7 @@ $ pip install -r requirements.txt
 **Confusion matrix : 이진 분류 (얼굴 만지기/안만지기)**
 <br>
 
-<p align="center"><img src='./imgs/result_confusion_binary.png' width="300" height="300"></p><br>
-<br>
+<p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
 
 ## 추가 데이터를 부탁 드립니다. 
 
