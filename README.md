@@ -1,7 +1,3 @@
-
-
-
-
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
 <br>
 

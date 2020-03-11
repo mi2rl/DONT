@@ -4,9 +4,7 @@
 # 얼굴을 만지지 마세요 (DO Not Touch your face, DONT)
 
 * 이 프로그램은 세계적으로 대유행인 코로나-19(SARS-CoV-2)를 극복하기 위해 서울 아산병원의 MI2RL 연구실에서 개발하였습니다.  
-
 * 사전학습된 신경망이 weights 폴더에 업로드 되어있습니다. 
-
 * 비디오 데모  : https://youtu.be/l4uRJzF222o
 
 <br>
