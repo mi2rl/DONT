@@ -1,23 +1,22 @@
 
 <center><img src='./imgs/logo.png' width="440" height="150"></center><br>
 
-  
-
+<br>
 
 # DO Not Touch your face (DONT)
 
 DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea  
 
 Pretrained action classification network is available (weights folder)  
-   
 
+<br>
 
-## NEWS: Ver.0.2 release !
+## NEWS : Ver.0.2 release !
 
 * Boost up accuracy of action recognition  
 * Fixed minor bugs    
-  
-  
+
+<br>
 
 ## Installation
 
@@ -37,7 +36,7 @@ $ pip install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f https://download.pyto
 $ pip install -r requirements.txt
 ```
 
-  
+  <br>
 
 
 ## Quick Guide
@@ -52,13 +51,14 @@ $ pip install -r requirements.txt
 
 * GUI Window  
 
-  <center><img src='./imgs/GUI.png' width="500" height="139"></center><br>
-  * Run/pause the classifier by '시작'/'중지' button
+  <center><img src='./imgs/GUI.png' width="500" height="139"></center><br>  
+* Run/pause the classifier by '시작'/'중지' button
     * Action classifier's result will be shown 
   * Change configuration by '설정' button (To be updated)
-  * View web-cam image by '카메라' button  
-    
+  * View web-cam image by '카메라' button   
   
+
+<br>
 
 
 ## Further details
@@ -117,15 +117,14 @@ $ pip install -r requirements.txt
     * OS : Linux / Windows  
       
 
+<br>
+
 ## Experiment Results
 
 **Confusion matrix : multi-class**
 
 <center><img src='./imgs/result_confusion_multi.png' width="600" height="600"></center><br>
 
-
-
 **Confusion matrix : binary-class**
 
 <center><img src='./imgs/result_confusion_binary.png' width="300" height="300"></center><br>
-
