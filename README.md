@@ -1,4 +1,7 @@
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
+<br>
+
+[한글버전 README로 이동](https://github.com/mi2rl/DONT/blob/master/README_KOREAN.md)
 
 <br>
 
@@ -24,6 +27,8 @@
 
   * Release English version
 
+  * Add configuration 
+  
     
 
 <br>
@@ -93,20 +98,19 @@ $ pip install -r requirements.txt
 * **Action Classification Network**
   * I3D Network (https://github.com/deepmind/kinetics-i3d)   
     * Additional settings
-    * Training phase
-        * The number of  frames in each stack for 3D CNN : 16
-        * Data augmentation
-          * Step in frames between each clip : 4
-          * Color distortion
-          * Rotation
-          
-      * Inference Phase
-        * The number of  frames in each stack for 3D CNN : 24
-          
+        * Training phase
+            * The number of  frames in each stack for 3D CNN : 16
+            * Data augmentation
+              * Step in frames between each clip : 4
+              * Color distortion
+              * Rotation
+              
+        * Inference Phase
+          * The number of  frames in each stack for 3D CNN : 24
+            
   
 * **H/W specification**
-
-  * Test specification.
+* Test specification.
   
     
     * GPU : Geforce GTX 960 4GB
@@ -136,6 +140,8 @@ $ pip install -r requirements.txt
 <br>
 
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="300" height="300"></p><br>
+<br>
+
 ## Contact for Data Donation 
 
 * For improving accuracy, we need more data from different environments. 
