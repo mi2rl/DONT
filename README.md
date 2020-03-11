@@ -1,4 +1,5 @@
-<p align="center"><img src='./imgs/logo.png' width="440" height="150"></p>
+<p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
+
 <br>
 
 # DO Not Touch your face (DONT)
