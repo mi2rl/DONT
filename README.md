@@ -1,4 +1,4 @@
-​																																										[한국어로보기](https://github.com/mi2rl/DONT/blob/master/README_KOREAN.md) 
+
 
 
 
@@ -12,6 +12,8 @@
 * Pretrained network is available (weights folder)  
 
 * Video demo  : https://youtu.be/l4uRJzF222o
+
+* [Translated into Korean](https://github.com/mi2rl/DONT/blob/master/README_KOREAN.md)
 
 <br>
 
