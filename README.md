@@ -1,8 +1,8 @@
+​																																										[한국어로보기](https://github.com/mi2rl/DONT/blob/master/README_KOREAN.md) 
+
+
+
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
-<br>
-
-[한글버전 README로 이동](https://github.com/mi2rl/DONT/blob/master/README_KOREAN.md)
-
 <br>
 
 # DO Not Touch your face (DONT)
@@ -104,7 +104,7 @@ $ pip install -r requirements.txt
               * Step in frames between each clip : 4
               * Color distortion
               * Rotation
-              
+            
         * Inference Phase
           * The number of  frames in each stack for 3D CNN : 24
             
@@ -112,7 +112,7 @@ $ pip install -r requirements.txt
 * **H/W specification**
 * Test specification.
   
-    
+  
     * GPU : Geforce GTX 960 4GB
     * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
     * OS : Linux Ubuntu 18.04
