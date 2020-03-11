@@ -1,5 +1,4 @@
-
-<center><img src='./imgs/logo.png' width="440" height="150"></center><br>
+<p align="center"><img src='./imgs/logo.png' width="440" height="150"></p>
 
 <br>
 
@@ -51,7 +50,7 @@ $ pip install -r requirements.txt
 
 * GUI Window  
 
-  <center><img src='./imgs/GUI.png' width="500" height="139"></center><br>  
+  <p align="center"><img src='./imgs/GUI.png' width="500" height="139"></p><br>  
 * Run/pause the classifier by '시작'/'중지' button
     * Action classifier's result will be shown 
   * Change configuration by '설정' button (To be updated)
@@ -87,7 +86,7 @@ $ pip install -r requirements.txt
         * Data augmentation
           * Step in frames between each clip : 4
           * Color distortion
-          * Rotation  
+          * Rotation
           
       * Inference Phase
         * The number of  frames in each stack for 3D CNN : 24
@@ -123,8 +122,8 @@ $ pip install -r requirements.txt
 
 **Confusion matrix : multi-class**
 
-<center><img src='./imgs/result_confusion_multi.png' width="600" height="600"></center><br>
+<p align="center"><img src='./imgs/result_confusion_multi.png' width="600" height="600"></p><br>
 
 **Confusion matrix : binary-class**
 
-<center><img src='./imgs/result_confusion_binary.png' width="300" height="300"></center><br>
+<p align="center"><img src='./imgs/result_confusion_binary.png' width="300" height="300"></p><br>
