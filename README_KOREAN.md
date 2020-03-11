@@ -1,7 +1,7 @@
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
 <br>
 
-# 얼굴을 만지지 마세요
+# 얼굴을 만지지 마세요 (DO Not Touch your face, DONT)
 
 * 이 프로그램은 세계적으로 대유행인 코로나-19(SARS-CoV-2)를 극복하기 위해 서울 아산병원의 MI2RL 연구실에서 개발하였습니다.  
 
@@ -88,7 +88,7 @@ $ pip install -r requirements.txt
     * 행동 종류 : 11 가지
       * 전체 행동 종류 : 물 마시기, 전화 받기, 마스크 벗기, 턱 괴기, 눈 비비기, 안경 만지기, 머리 만지기, 키보드 만지기, 코 만지기, 마스크 쓰기
       * 얼굴을 만지는 행동 : 전화 받기, 턱 괴기, 눈 비비기, 머리 만지기, 코 만지기
-    
+  
 * **Action Classification Network**
   * I3D Network (https://github.com/deepmind/kinetics-i3d)   
     * 부가적인 세팅
@@ -105,7 +105,7 @@ $ pip install -r requirements.txt
 * **하드웨어 환경**
 * 테스트 환경
   
-    
+  
     * GPU : Geforce GTX 960 4GB
     * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
     * OS : Linux Ubuntu 18.04
