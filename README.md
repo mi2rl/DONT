@@ -3,19 +3,27 @@
 
 # DO Not Touch your face (DONT)
 
-DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea  
+* DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea  
 
+* Pretrained network is available (weights folder)  
 
-**Pretrained action classification network is available (weights folder)**  
-
-**Demo video : https://youtu.be/l4uRJzF222o**
+* Video demo  : https://youtu.be/l4uRJzF222o
 
 <br>
 
-## NEWS : Ver.0.2 release !
+## NEWS (20.03.11) : ver.0.2 release !
 
 * Boost up accuracy of action recognition  
+
 * Fixed minor bugs    
+
+* TO DO:
+
+  * Release .exe, .deb file with manual
+
+  * Release English version
+
+    
 
 <br>
 
@@ -54,7 +62,7 @@ $ pip install -r requirements.txt
 
   <p align="center"><img src='./imgs/GUI.png' width="500" height="139"></p><br>  
 * Run/pause the classifier by '시작'/'중지' button
-    
+  
   * Action classifier's result will be shown 
   
 * Change configuration by '설정' button (To be updated)
@@ -108,7 +116,7 @@ $ pip install -r requirements.txt
       * 0.07~0.085 sec on GPU
       * 1.4~1.5 sec on CPU
       * CPU usage  ≈ 35%  
-      * GPU memory usage ≈  
+      * GPU memory usage ≈  1.1GB
         
     
   * Minimum specification
@@ -123,9 +131,12 @@ $ pip install -r requirements.txt
 
 ## Experiment Results
 
-**Confusion matrix : multi-class**
-
-<p align="center"><img src='./imgs/result_confusion_multi.png' width="600" height="600"></p><br>
 **Confusion matrix : binary-class**
+<br>
 
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="300" height="300"></p><br>
+## Contact for Data Donation 
+
+* For improving accuracy, we need more data from different environments. 
+  If you can give your data, please send it to namkugkim@gmail.com. Your privacy will be protected.
+
