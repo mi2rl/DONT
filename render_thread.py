@@ -42,7 +42,6 @@ class RenderThread(QThread):
 
     def run(self):
         cap = cv2.VideoCapture(0)
-        #cap = cv2.VideoCapture('/home/sungman/Videos/Short_Input.avi')
         while cap.isOpened():
             ret, frame = cap.read()
 
