@@ -120,8 +120,11 @@ class GUIViewer(QtWidgets.QWidget):
 
     def closeEvent(self, event):
         reply = QMessageBox.question(self, '닫기', '프로그램을 종료하시겠습니까?',
-                    QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+                    QMessageBox.Yes | QMessageBox.No)
+        
         if reply == QMessageBox.Yes:
+            self.render_thread.exit(True)
+            self.render_thread.wait()
             self.deleteLater()
             event.accept()
 
@@ -165,42 +168,43 @@ class ConfigboxViewer(QDialog):
     def __init__(self):
         super().__init__()
         self.initUI()
+        self.language = 'english'
 
     def initUI(self):
-        self.setWindowTitle('설정')
+        self.setWindowTitle('Configuration')
         
-        self.label = QLabel('알람을 받을 행동을 체크해주세요')
+        self.label = QLabel('Please check the action to receive an alarm.')
         
         ### Button Layout
 
-        self.mask_cb = QCheckBox('마스크 착용', self)
+        self.korean_ver_cb = QCheckBox('Translated into Korean', self)
+        self.korean_ver_cb.stateChanged.connect(self.check_translate_korean)
+        
+        self.mask_cb = QCheckBox('Wearing/Removing mask', self)
+        self.chin_cb = QCheckBox('Resting chin on hand', self)
+        self.eye_cb = QCheckBox('Rubbing eyes', self)
+        self.hair_cb = QCheckBox('Touching hairs', self)
+        self.phone_cb = QCheckBox('Touching phone', self)
+        self.call_cb = QCheckBox('Picking up phone', self)
+        self.eye_glass_cb = QCheckBox('Wearing glasses', self)
+        self.water_cb = QCheckBox('Drinking', self)
+        self.check_btn = QPushButton('Apply')
+
+        ### English ver
+        
         self.mask_cb.stateChanged.connect(self.check_mask)
-        
-        self.chin_cb = QCheckBox('턱 괴기', self)
         self.chin_cb.stateChanged.connect(self.check_chin)
-        
-        self.eye_cb = QCheckBox('눈 비비기', self)
         self.eye_cb.stateChanged.connect(self.check_eye)
-        
-        self.hair_cb = QCheckBox('머리 만지기', self)
         self.hair_cb.stateChanged.connect(self.check_hair)
-        
-        self.phone_cb = QCheckBox('핸드폰 만지기', self)
         self.phone_cb.stateChanged.connect(self.check_phone)
-        
-        self.call_cb = QCheckBox('전화 받기', self)
         self.call_cb.stateChanged.connect(self.check_call)
-        
-        self.eye_glass_cb = QCheckBox('안경 만지기', self)
         self.eye_glass_cb.stateChanged.connect(self.check_eye_glass)
-        
-        self.water_cb = QCheckBox('물마시기', self)
         self.water_cb.stateChanged.connect(self.check_water)
-        
-        self.check_btn = QPushButton('적용')
         self.check_btn.clicked.connect(self.check_clicked)
 
+
         v_layout = QtWidgets.QVBoxLayout()
+        v_layout.addWidget(self.korean_ver_cb)
         v_layout.addWidget(self.mask_cb)
         v_layout.addWidget(self.chin_cb)
         v_layout.addWidget(self.eye_cb)
@@ -213,6 +217,34 @@ class ConfigboxViewer(QDialog):
         self.setLayout(v_layout)
 
         self.setGeometry(1295, 660, 140, 450)
+
+    def check_translate_korean(self):
+        if self.language is 'english':
+            self.language = 'korean'
+
+            self.mask_cb.setText('마스크 쓰기/벗기')
+            self.chin_cb.setText('턱 괴기')
+            self.eye_cb.setText('눈 비비기')
+            self.hair_cb.setText('머리 만지기')
+            self.phone_cb.setText('핸드폰 만지기')
+            self.call_cb.setText('전화 받기')
+            self.eye_glass_cb.setText('안경 만지기')
+            self.water_cb.setText('물마시기')
+            self.check_btn.setText('적용')
+
+        else:
+            self.language = 'english' 
+
+            self.mask_cb.setText('Wearing/Removing mask')
+            self.chin_cb.setText('Resting chin on hand')
+            self.eye_cb.setText('Rubbing eyes')
+            self.hair_cb.setText('Touching hairs')
+            self.phone_cb.setText('Touching phone')
+            self.call_cb.setText('Picking up phone')
+            self.eye_glass_cb.setText('Wearing glasses')
+            self.water_cb.setText('Drinking')
+            self.check_btn.setText('Apply')
+
 
     def check_mask(self):
         print('check_mask clicked')

@@ -35,6 +35,7 @@ from action_classifier import ActionClassifier
 
 class RenderThread(QThread):
     status = None
+    exitFlag = False
     action_classifier = ActionClassifier(model_path='weights/i3d_rgb_multi_class.pth')
     changePixmap = pyqtSignal(QImage)
     
@@ -58,6 +59,10 @@ class RenderThread(QThread):
             convertToQtFormat = QImage(rgb_img.data, w, h, bytesPerLine, QImage.Format_RGB888)
             p = convertToQtFormat.scaled(480,320, Qt.KeepAspectRatio)
             self.changePixmap.emit(p)
+
+            if self.exitFlag is True:
+                break
+
             
     
     def setStatus(self, status):
@@ -65,6 +70,8 @@ class RenderThread(QThread):
 
     def get_action_result(self):
         return self.action_result
-
+    
+    def exit(self, bool_flag):
+        self.exitFlag = True
         
 

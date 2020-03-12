@@ -120,6 +120,7 @@ class ActionClassifier:
             self.pred = self.classes[int(top_idx[0,0].data.numpy())]
             self.score = top_val[0,0].data.numpy()
             if (self.pred in self.touching_actions) & (self.score > 0.9) :
+                #print(self.pred, self.score)
                 self.pred = '얼굴을 만지지 마세요 !'
             else:
                 self.pred = '' 
