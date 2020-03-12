@@ -133,8 +133,8 @@ $ pip install -r requirements.txt
 
 **Confusion matrix : 이진 분류 (얼굴 만지기/안만지기)**
 <br>
-
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
+
 ## 한계점
 
 * 이 프로젝트는 2020.03.05 부터 시작되어, 약 1주일째 진행되는중입니다. **높은 성능의 프로그램을 만드는 것 보다 빠른 배포를 통한 공동의 노력을 촉구하는 것이 코로나-19 확산 방지를 위하여 더 바람직**할 것으로 판단하여, 아직 부족함에도 불구하고 공개를 진행하게 되었습니다. 
