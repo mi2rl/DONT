@@ -138,9 +138,8 @@ $ pip install -r requirements.txt
 ## Experiment Results
 
 **Confusion matrix : binary-class**
-<br>
-
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
+
 ## Limitations
 
 * DONT began at 2020.03.05, and has been in the works for about a week. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
@@ -148,12 +147,10 @@ $ pip install -r requirements.txt
 <br>
 
 
-
 ## Contact for Data Donation 
 
 * For more robust DONT, we need more data from different environments and persons. 
   If you want to donate your data, please send it to namkugkim@gmail.com. Your privacy will be protected, as strong as possible.
-
 
 
 ### Guideline for data donation
