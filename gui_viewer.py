@@ -72,16 +72,15 @@ class GUIViewer(QtWidgets.QWidget):
         self.touching_status = QLabel('알림 : ')
 
         ### Button Layout. 
-        self.config_btn = QPushButton('설정')
-        self.config_btn.clicked.connect(self.config_clicked)
-
+        #self.config_btn = QPushButton('설정')
         self.view_btn = QPushButton('카메라')
-        self.view_btn.clicked.connect(self.view_clicked)
-
         self.start_btn = QPushButton('시작')
-        self.start_btn.clicked.connect(self.start_clicked)
-
         self.pause_btn = QPushButton('중지')
+
+
+        #self.config_btn.clicked.connect(self.config_clicked)
+        self.view_btn.clicked.connect(self.view_clicked)
+        self.start_btn.clicked.connect(self.start_clicked)
         self.pause_btn.clicked.connect(self.pause_clicked)
         ### 
         
@@ -91,14 +90,14 @@ class GUIViewer(QtWidgets.QWidget):
         h_layout = QtWidgets.QHBoxLayout()
         h_layout.addWidget(self.start_btn)
         h_layout.addWidget(self.pause_btn)
-        h_layout.addWidget(self.config_btn)
+        #h_layout.addWidget(self.config_btn)
         h_layout.addWidget(self.view_btn)
         v_layout.addLayout(h_layout)
         self.setLayout(v_layout)
         
         self.setGeometry(1440, 1030, 500, 50)
 
-        self.setWindowTitle('얼굴을 만지지 마세요 (ver.0.2)')
+        self.setWindowTitle('DONT (20.03.12. ver.0.3)')
         
         
     def config_clicked(self):
@@ -168,27 +167,29 @@ class ConfigboxViewer(QDialog):
     def __init__(self):
         super().__init__()
         self.initUI()
-        self.language = 'english'
+        self.language = 'korean'
 
     def initUI(self):
-        self.setWindowTitle('Configuration')
+        self.setWindowTitle('설정')
         
-        self.label = QLabel('Please check the action to receive an alarm.')
+        #self.label = QLabel('알람을 받을 행동을 선택해주세요')
         
         ### Button Layout
 
-        self.korean_ver_cb = QCheckBox('Translated into Korean', self)
+        self.korean_ver_cb = QCheckBox('Translated into English', self)
         self.korean_ver_cb.stateChanged.connect(self.check_translate_korean)
-        
-        self.mask_cb = QCheckBox('Wearing/Removing mask', self)
-        self.chin_cb = QCheckBox('Resting chin on hand', self)
-        self.eye_cb = QCheckBox('Rubbing eyes', self)
-        self.hair_cb = QCheckBox('Touching hairs', self)
-        self.phone_cb = QCheckBox('Touching phone', self)
-        self.call_cb = QCheckBox('Picking up phone', self)
-        self.eye_glass_cb = QCheckBox('Wearing glasses', self)
-        self.water_cb = QCheckBox('Drinking', self)
-        self.check_btn = QPushButton('Apply')
+        self.check_btn = QPushButton('적용')
+        self.check_btn.clicked.connect(self.apply_clicked)
+        '''
+        #self.mask_cb = QCheckBox('Wearing/Removing mask', self)
+        #self.chin_cb = QCheckBox('Resting chin on hand', self)
+        #self.eye_cb = QCheckBox('Rubbing eyes', self)
+        #self.hair_cb = QCheckBox('Touching hairs', self)
+        #self.phone_cb = QCheckBox('Touching phone', self)
+        #self.call_cb = QCheckBox('Picking up phone', self)
+        #self.eye_glass_cb = QCheckBox('Wearing glasses', self)
+        #self.water_cb = QCheckBox('Drinking', self)
+        #self.check_btn = QPushButton('Apply')
 
         ### English ver
         
@@ -215,13 +216,19 @@ class ConfigboxViewer(QDialog):
         v_layout.addWidget(self.water_cb)
         v_layout.addWidget(self.check_btn)
         self.setLayout(v_layout)
+        '''
+        v_layout = QtWidgets.QVBoxLayout()
+        v_layout.addWidget(self.korean_ver_cb)
+        self.setLayout(v_layout)
 
-        self.setGeometry(1295, 660, 140, 450)
+        #self.setGeometry(1295, 660, 140, 450)
+        self.setGeometry(1350, 850, 140, 50)
 
     def check_translate_korean(self):
         if self.language is 'english':
             self.language = 'korean'
-
+            
+            '''
             self.mask_cb.setText('마스크 쓰기/벗기')
             self.chin_cb.setText('턱 괴기')
             self.eye_cb.setText('눈 비비기')
@@ -231,10 +238,11 @@ class ConfigboxViewer(QDialog):
             self.eye_glass_cb.setText('안경 만지기')
             self.water_cb.setText('물마시기')
             self.check_btn.setText('적용')
+            '''
 
         else:
             self.language = 'english' 
-
+            '''
             self.mask_cb.setText('Wearing/Removing mask')
             self.chin_cb.setText('Resting chin on hand')
             self.eye_cb.setText('Rubbing eyes')
@@ -244,6 +252,7 @@ class ConfigboxViewer(QDialog):
             self.eye_glass_cb.setText('Wearing glasses')
             self.water_cb.setText('Drinking')
             self.check_btn.setText('Apply')
+            '''
 
 
     def check_mask(self):
@@ -270,8 +279,7 @@ class ConfigboxViewer(QDialog):
     def check_water(self):
         print('check_water clicked')
 
-    def check_clicked(self):
-        print('check btn clicked')
+    def apply_clicked(self):
         self.accept()
     
     def showModal(self):
