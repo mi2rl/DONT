@@ -135,7 +135,6 @@ $ pip install -r requirements.txt
     
       * OS : Linux / Windows  
     
-        <br>
 
 ## 실험결과
 
@@ -143,6 +142,7 @@ $ pip install -r requirements.txt
 <br>
 
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
+
 ## 추가 데이터를 부탁드립니다
 
 행동 인식 신경망의 정확도를 높이기 위하여, 조금 더 다양한 환경과 많은 사람의 데이터가 필요합니다. 
