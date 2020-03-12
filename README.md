@@ -5,8 +5,6 @@
     <p align="right"><a href="https://github.com/mi2rl/DONT/blob/master/README.md"><img src='./imgs/korea.png' width="40" height="30"></a></p>
 </div>
 
-<br>
-
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
 <br>
 
@@ -17,9 +15,9 @@
 * 사전학습된 신경망이 weights 폴더에 업로드 되어있습니다. 
 * 비디오 데모  : https://youtu.be/Yn7jqsNAmNk
 
+<br>
 
-
-### 한계점
+## 한계점
 
 * 이 프로젝트는 2020.03.05 부터 시작되어, 약 1주일 동안 진행되었습니다. **높은 성능의 프로그램을 만드는 것 보다 빠른 배포를 통한 공동의 노력을 촉구하는 것이 코로나-19 확산 방지를 위하여 더 바람직**할 것으로 판단하여, 아직 부족함에도 불구하고 프로그램 배포를 진행하게 되었습니다. 
 * 높은 성능을 위해서는 많은 데이터 확보가 필요합니다. [이곳](#추가-데이터를-부탁드립니다) 을 참조하시어, 데이터를 기부해 주신다면 감사드리겠습니다. 
@@ -88,7 +86,7 @@ $ pip install -r requirements.txt
 
 ## 세부사항
 
-* **타당성/합리성(Rationale)**
+* **타당성 / 합리성(Rationale)**
     * A Study Quantifying the Hand-to-Face Contact Rate and Its Potential Application to Predicting Respiratory Tract Infection (https://www.tandfonline.com/doi/full/10.1080/15459620802003896)
     * Controlling the novel A (H1N1) influenza virus: don't touch your face! (https://www.journalofhospitalinfection.com/article/S0195-6701(09)00255-2/abstract)
     * Hand Hygiene Practices in a Neonatal Intensive Care Unit: A Multimodal Intervention and Impact on Nosocomial Infection (https://pediatrics.aappublications.org/content/114/5/e565.short)  
@@ -145,7 +143,7 @@ $ pip install -r requirements.txt
 <br>
 
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
-## * 추가 데이터를 부탁드립니다 *
+## 추가 데이터를 부탁드립니다
 
 행동 인식 신경망의 정확도를 높이기 위하여, 조금 더 다양한 환경과 많은 사람의 데이터가 필요합니다. 
 당신의 데이터 강력하게 보호 될 예정입니다. 데이터는 dev.sungman@gmail.com 또는 minjeekim00@gmail.com 으로 보내주시면 감사드리겠습니다. 
@@ -154,6 +152,7 @@ $ pip install -r requirements.txt
 
 ### 동영상 촬영 가이드라인
 
+* 아래의 주어진 행동대로 동영상을촬영하여, 위의 메일로 보내주세요.
 * 동영상 촬영 순서는 다음과 같습니다. 
   * 마스크 쓰기 -> (마스크를 착용한 상태에서) -> 코 만지기 -> 턱 괴기 -> 눈 비비기 -> 머리 쓸기 -> 물 마시기 -> 핸드폰 만지기 -> 전화 받기 -> 키보드 사용하기 -> (마스크를 벗은 상태에서) -> 코 만지기 -> 턱 괴기 -> 눈 비비기 -> 머리 쓸기 -> 물 마시기 -> 핸드폰 만지기 -> 전화 받기 -> 키보드 사용하기 
   * 영상의 길이는 90초 정도가 적당합니다. 

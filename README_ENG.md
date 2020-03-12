@@ -1,42 +1,35 @@
-<div style="width:40px;height:30px;float:left;">
-    <p align="left"><a href="https://github.com/mi2rl/DONT/blob/master/README_ENG.md"><img src='./imgs/america.png' width="40" height="30"></a></p>
+<div style="width:40px;height:30px;float:right;">
+    <p align="right"><a href="https://github.com/mi2rl/DONT/blob/master/README_ENG.md"><img src='./imgs/america.png' width="40" height="30"></a></p>
 </div>
-<div style="width:40px;height:30px;float:left;">
-    <p align="left"><a href="https://github.com/mi2rl/DONT/blob/master/README.md"><img src='./imgs/korea.png' width="40" height="30"></a></p>
+<div style="width:40px;height:30px;float:right;">
+    <p align="right"><a href="https://github.com/mi2rl/DONT/blob/master/README.md"><img src='./imgs/korea.png' width="40" height="30"></a></p>
 </div>
-
-<br>
 
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
 <br>
 
 # DO Not Touch your face (DONT)
 
+* Download link of execution file  : 
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea  
-
 * Pretrained network is available (weights folder)  
-
 * Video demo  : https://youtu.be/Yn7jqsNAmNk
 
 
 <br>
 
-## NEWS (20.03.11) : ver.0.2 release !
+## NEWS (20.03.12) : ver.0.2.1
 
-* Boost up accuracy of action recognition  
+* Release the execution file for window 
 
-* Fixed minor bugs    
+* Fixed minor bugs  (thread issue)
 
 * TO DO:
 
-  * Release .exe, .deb file with manual
+  * Support Korean/English language in GUI
 
-  * Release English version
-
-  * Add configuration 
-  
   * Writing paper
-  
+
     
 
 <br>
@@ -151,5 +144,14 @@ $ pip install -r requirements.txt
 
 * For more robust DONT, we need more data from different environments and persons. 
   If you want to donate your data, please send it to namkugkim@gmail.com. Your privacy will be protected, as strong as possible.
-* Data donation guide link
+
+
+
+### Guideline for data donation
+
+* Please take a video and send it to the e-mail address above.
+* Recording process is as follows.
+  * Wearing mask -> (With a mask) -> Touching nose -> Resting chin on hand -> Rubbing eyes -> Touching hairs -> Drinking water-> Touching phone -> Picking up phone -> Touching keyboard -> (Without a mask) -> Touching nose -> Resting chin on hand -> Rubbing eyes -> Touching hairs -> Drinking water-> Touching phone -> Picking up phone -> Touching keyboard
+  * Moderate video recording time is about 90 seconds.
+  * Example : [Gudieline for video recording](https://youtu.be/NU5FlHp6Qgg)
 
