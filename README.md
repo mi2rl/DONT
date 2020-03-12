@@ -8,14 +8,14 @@
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
 <br>
 
-# 얼굴을 만지지 마세요 / 손씻으세요 (DO Not Touch your face / WASH your hand, DONT / WASH)
+# 얼굴을 만지지 마세요 / 손씻으세요 (DO Not Touch your face / WASH your hand, DONT/WASH)
 
 * 실행파일 다운로드 링크 : https://drive.google.com/open?id=1owgC56KuQbNRNkF3gEJ7_52jhjeLmqFV
 * 이 프로그램은 세계적으로 대유행인 코로나-19(SARS-CoV-2)를 극복하기 위해 서울아산병원의 MI2RL 연구실에서 개발하였습니다.  
 * 사전학습된 신경망을 weights 폴더에 업로드 하였습니다. 필요하신 분들은 마음대로 쓰십시오.
 * 비디오 데모  : https://youtu.be/Yn7jqsNAmNk
 * **목차**
-  * [1. NEWS](#1.-NEWS-(20.03.12)-:-DONT-/-WASH-ver.0.2.1)
+  * [1. NEWS](#1.-NEWS-(20.03.12)-:-DONT/WASH-ver.0.2.1)
   * [2. 설치방법](#2.-설치방법)
   * [3. 사용설명서](#3.-사용설명서)
   * [4. 세부사항](#4.-세부사항)
@@ -26,7 +26,7 @@
 
 
 
-## 1. NEWS (20.03.12) : DONT / WASH ver.0.2.1 
+## 1. NEWS (20.03.12) : DONT/WASH ver.0.2.1 
 
 * 윈도우용 실행파일이 배포되었습니다. 
 
