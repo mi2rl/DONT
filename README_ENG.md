@@ -10,13 +10,14 @@
 
 # DO Not Touch your face (DONT)
 
-* Download link of execution file  : 
+* Download link (execution file)  : https://drive.google.com/open?id=1owgC56KuQbNRNkF3gEJ7_52jhjeLmqFV
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea  
 * Pretrained network is available (weights folder)  
 * Video demo  : https://youtu.be/Yn7jqsNAmNk
 
-
 <br>
+
+
 
 ## NEWS (20.03.12) : ver.0.2.1
 
@@ -140,6 +141,14 @@ $ pip install -r requirements.txt
 <br>
 
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
+## Limitations
+
+* DONT began at 2020.03.05, and has been in the works for about a week. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
+
+<br>
+
+
+
 ## Contact for Data Donation 
 
 * For more robust DONT, we need more data from different environments and persons. 
