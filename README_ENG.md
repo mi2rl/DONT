@@ -10,28 +10,34 @@
 
 # DO Not Touch your face (DONT)
 
-* Download link (execution file)  : https://drive.google.com/open?id=1owgC56KuQbNRNkF3gEJ7_52jhjeLmqFV
-* DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea  
-* Pretrained network is available (weights folder)  
-* Video demo  : https://youtu.be/Yn7jqsNAmNk
+* Download link (executable file)  : https://drive.google.com/open?id=1owgC56KuQbNRNkF3gEJ7_52jhjeLmqFV
+* DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
+* Pre-trained network is available (weights folder)  
+* Demo video  : https://youtu.be/Yn7jqsNAmNk
 
 <br>
 
 
 
-## NEWS (20.03.12) : ver.0.2.1
+## NEWS (12.03.20) : ver.0.2.1
 
-* Release the execution file for window 
+* Released an executable file for Windows 10 32bit/64bit
 
-* Fixed minor bugs  (thread issue)
+* Fixed minor bugs  (thread termination issue)
 
 * TO DO:
 
-  * Support Korean/English language in GUI
-
-  * Writing paper
-
-    
+  * Upload a paper on Arxiv about this project
+  
+  * Add a sound effects for alarm
+  
+  * Add a "report" function based on 24-hour monitoring mode
+  
+  * Increase the supported language (Eng, Jap) in GUI
+  
+  * Try video clips from ceiling-mounted security cameras
+  
+  * Develop a lightweight model for mobile phones
 
 <br>
 
