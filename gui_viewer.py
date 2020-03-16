@@ -1,5 +1,5 @@
 '''
-##### DO Not Touch your face ver.0.2
+##### DO Not Touch your face ver.0.2.1
 
 ### Medical Imaging & Intelligent Reality Lab (MI2RL) @ Asan Medical Center(AMC)
 # MI2RL website : https://www.mi2rl.co/
@@ -39,7 +39,7 @@ class GUIViewer(QtWidgets.QWidget):
         super().__init__()
         
         self.initUI()
-        self.position = self._get_location()
+        #self.position = self._get_location()
         
         # TODO : connect ConfigViewer to main GUIviewer
         self.config_window = ConfigboxViewer()
@@ -95,9 +95,9 @@ class GUIViewer(QtWidgets.QWidget):
         v_layout.addLayout(h_layout)
         self.setLayout(v_layout)
         
-        self.setGeometry(1440, 1030, 500, 50)
+        #self.setGeometry(1440, 1030, 500, 50)
 
-        self.setWindowTitle('DONT (20.03.12. ver.0.3)')
+        self.setWindowTitle('DONT (20.03.12. ver.0.2.1)')
         
         
     def config_clicked(self):
@@ -157,7 +157,7 @@ class VideoViewer(QDialog):
         v_layout.addLayout(h_layout)
         self.setLayout(v_layout)
 
-        self.setGeometry(1440, 655, 480, 320)
+        #self.setGeometry(1440, 655, 480, 320)
 
     def showModal(self):
         return super().exec_()
@@ -222,7 +222,7 @@ class ConfigboxViewer(QDialog):
         self.setLayout(v_layout)
 
         #self.setGeometry(1295, 660, 140, 450)
-        self.setGeometry(1350, 850, 140, 50)
+		#self.setGeometry(1350, 850, 140, 50)
 
     def check_translate_korean(self):
         if self.language is 'english':
