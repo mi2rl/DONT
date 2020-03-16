@@ -71,6 +71,15 @@ $ pip install -r requirements.txt
 
 * 실행파일을 통한 실행
 
+  * 압축을 해제한 이후에, DONE.exe 실행
+
+    <p align="center"><img src='./imgs/screenshot.png' width="80%" height="80%"></p><br>  
+
+* 카메라를 눌러서, 카메라 화면을 보고 있는 도중에는 다른 버튼이 클릭되지 않습니다. 
+  (카메라를 종료시킨 이후에, 버튼을 눌러주세요)
+
+* **카메라가 연결되어있지 않은경우, 기능이 정상동작하지 않습니다.**
+
 <br>
 
 ## 4. 세부사항
