@@ -33,7 +33,7 @@
   
   * Add a "report" function based on 24-hour monitoring mode
   
-  * Increase the supported language (Eng, Jap) in GUI
+  * Increase the supported languages (Eng, Jap) for GUI
   
   * Try video clips from ceiling-mounted security cameras
   
@@ -44,16 +44,16 @@
 ## Installation
 
 ```bash
-# Clone this repository
+# Clone the following repository
 $ git clone https://github.com/mi2rl/DONT.git
 
-# Make virtual environment
+# Make a virtual environment
 $ conda create -n [your virtual environment name] python3
 
-# Activate virtual environment
+# Activate the virtual environment
 $ conda activate fta_gpu
 
-# Install requirements
+# Install all requirements
 $ pip install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
 
 $ pip install -r requirements.txt
@@ -77,10 +77,22 @@ $ pip install -r requirements.txt
   <p align="center"><img src='./imgs/GUI.png' width="500" height="139"></p><br>  
 * Run/pause the classifier by '시작'/'중지' button
   
-  * Action classifier's result will be shown 
+* The result from action classifier will be shown 
   
-* Change configuration by '설정' button (To be updated)
-* View web-cam image by '카메라' button   
+* Change an option using '설정' button (To be updated)
+    * '알림: ' shows a reconized action
+* Switch ON monitoring mode using '카메라' button   
+
+* Run the Windows Software using EXE file
+
+  * Unzip a downloaded file, then run "DONE.exe"
+
+    <p align="center"><img src='./imgs/screenshot.png' width="80%" height="80%"></p><br>  
+
+* When the monitoring mode is on, other buttons are deactivated 
+  (Terminate monitoring mode and press the buttons)
+
+* **If the webcam is not ready, the software does NOT work.**
 
 <br>
 
@@ -138,6 +150,19 @@ $ pip install -r requirements.txt
       * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
       * OS : Linux / Windows  
 
+          * 0.07~0.085 sec on GPU
+          * GPU memory usage ≈ 1.1GB
+        * CPU inference mode added
+          * 1.4~1.5 sec on CPU
+          * CPU usage  ≈ 35%  
+
+    * Minimum requirements
+    
+      * GPU : Geforce GTX 960 4GB
+    
+      * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
+    
+      * OS : Linux / Windows  
 
 <br>
 
@@ -167,3 +192,13 @@ $ pip install -r requirements.txt
   * Moderate video recording time is about 90 seconds.
   * Example : [Gudieline for video recording](https://youtu.be/NU5FlHp6Qgg)
 
+<br>
+
+## Project Contributors
+
+* Artificial Neural Network and GUI development
+  * Sungman Cho(dev.sungman@gmail.com), Minjee Kim(minjeekim00@gmail.com)
+* Data acquisition and annotation
+  * Joonmyeong Choi(jm5901@gmail.com), Taehyung Kim(kimtaehyeong62@gmail.com), Juyoung Park(godoctorsam@gmail.com)
+* Management: Prof. Namkug Kim(namkugkim@gmail.com)
+* Data support : 37 MI2RL researchers, Prof. Dongwoo Seo(AMC), Prof. Namkug Kim(AMC & Univ. of Ulsan), Prof. Sunjin Lim(SNU)
