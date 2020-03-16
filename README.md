@@ -13,7 +13,7 @@
 * 이 프로그램은 세계적으로 대유행인 코로나-19(SARS-CoV-2)를 극복하기 위해 서울아산병원의 MI2RL 연구실에서 개발하였습니다.  
 * 사전학습된 신경망을 weights 폴더에 업로드 하였습니다. 필요하신 분들은 마음대로 쓰십시오.
 * 비디오 데모  : https://youtu.be/Yn7jqsNAmNk
-<br>
+* 주의 - 본 프로그램은 GTX 960 이상(게임용)의 GPU가 있을 때 0.08sec 의 속도로 원활하게 작동합니다. CPU의 경우 최적화가 부족해서 1.5sec의 속도로 돌아가기 때문에, GPU 성능이 부족한 노트북에서는 끊김현상이 발생할 수 있습니다. <br>
 
 ## 1. NEWS (20.03.12) : DONT/WASH ver.0.2.1
 
@@ -31,7 +31,7 @@
   
   * CCTV에 적용
   
-  * 모델 경량화를 통한 핸드폰에 적용
+  * 모델 경량화를 통한 CPU 버전 및 핸드폰버전 개발
 <br>
 
 ## 2. 설치방법
@@ -71,7 +71,7 @@ $ pip install -r requirements.txt
 
 * 실행파일을 통한 실행
 
-  * 압축을 해제한 이후에, DONE.exe 실행
+  * 압축을 해제한 이후에, DONT.exe 실행
 
     <p align="center"><img src='./imgs/screenshot.png' width="80%" height="80%"></p><br>  
 
