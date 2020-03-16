@@ -62,7 +62,7 @@ $ pip install -r requirements.txt
     ```
   * GUI 화면
     
-    <p align="center"><img src='./imgs/GUI.png' width="500" height="139"></p><br>  
+    <p align="center"><img src='./imgs/GUI.png' width="100%" height="100%"></p><br>  
   * '시작'/'중지' 버튼을 눌러 행동 인식 기능을 키고/끄고 할 수 있습니다. 
     
     * 행동 인식 결과는 '알림: ' 에 표시됩니다. 
