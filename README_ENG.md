@@ -10,7 +10,7 @@
 
 # DO Not Touch your face (DONT)
 
-* Download link (executable file)  : https://www.dropbox.com/s/rhehe3lvq1wqbjv/dont-release.ver.0.2.1.zip?dl=0
+* Download link (executable file)  : https://www.dropbox.com/s/2rfqog5kxuq4hmw/dont-release.ver.0.3.zip?dl=0
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 * Pre-trained network is available (weights folder)  
 * Demo video  : https://youtu.be/Yn7jqsNAmNk
@@ -73,7 +73,7 @@ $ pip install -r requirements.txt
 
 * GUI Window  
 
-  <p align="center"><img src='./imgs/GUI.png' width="50%" height="50%"></p><br>  
+  <p align="center"><img src='./imgs/GUI_eng.png' width="50%" height="50%"></p><br>  
   * Run/pause the classifier by 'Start'/'Pause' button
     
     * The result from action classifier will be shown 
@@ -139,7 +139,7 @@ $ pip install -r requirements.txt
           * 1.4~1.5 sec on CPU
           * CPU usage  ≈ 35%  
           * GPU memory usage ≈  1.1GB
-            
+      
     * Minimum specification
       * Geforce GTX 960 4GB
       * Intel(R) Core i7-6700 CPU 3.40GHz
