@@ -10,7 +10,7 @@
 
 # DO Not Touch your face (DONT)
 
-* Download link for Windows OS (executable file)  : http://dont.mi2rl.co/dont-release.ver.0.3.zip
+* Download link (executable file)  : https://www.dropbox.com/s/2rfqog5kxuq4hmw/dont-release.ver.0.3.zip?dl=0
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 * Pre-trained network is available (weights folder)  
 * Demo video  : https://youtu.be/Yn7jqsNAmNk
@@ -28,7 +28,7 @@
 
   * Upload a paper on Arxiv about this project
   
-  * Add a sound effects for alarm
+  * Add sound effects for alarm
   
   * Add a "report" function based on 24-hour monitoring mode
   
@@ -43,16 +43,16 @@
 ## Installation
 
 ```bash
-# Clone the following repository
+# Clone this repository and enter it:
 $ git clone https://github.com/mi2rl/DONT.git
 
-# Make a virtual environment
+# Set up the environment
 $ conda create -n [your virtual environment name] python3
 
-# Activate the virtual environment
+# Activate the environment
 $ conda activate fta_gpu
 
-# Install all requirements
+# Install all the dependencies
 $ pip install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
 
 $ pip install -r requirements.txt
@@ -71,26 +71,26 @@ $ pip install -r requirements.txt
 
 
 
-* GUI Window  
+* GUI
 
   <p align="center"><img src='./imgs/GUI_eng.png' width="50%" height="50%"></p><br>  
   * Run/pause the classifier by 'Start'/'Pause' button
     
     * The result from action classifier will be shown 
     
-  * Switch ON monitoring mode using 'Camera' button   
+  * Turn on Webcam display in live using 'Camera' button   
   <br>
   
-* Run the Windows Software using EXE file
+* Run Windows (EXE) App
 
-  * Unzip a downloaded file, then run "DONT.exe"
+  * Unzip a downloaded .zip file, then run "DONT.exe"
 
     <p align="center"><img src='./imgs/screenshot.png' width="80%" height="80%"></p><br>  
 
-* When the monitoring mode is on, other buttons are deactivated 
-  (Terminate monitoring mode and press the buttons)
+* When Webcam display window is activated, other buttons are deactivated 
+  (Terminate Webcam display mode and press the buttons)
 
-* **If the webcam is not ready, the software does NOT work.**
+* **If the webcam is not ready, the software does NOT work properly.**
 
 <br>
 
@@ -106,11 +106,11 @@ $ pip install -r requirements.txt
 
 * **Datasets**
   
-    * To make training data, [MI2RL](https://www.mi2rl.co/) researchers and professors obtain a total of 190,000 images
-    * Recording at approximately 10 different locations  
+    * In order to make the training dataset, [MI2RL](https://www.mi2rl.co/) members and many collaborators contributed. As a result, we gathered a total of 190,000 images
+    * Video clips were recorded at more than 10 different locations  
     * Action classes : 11 classes 
       * Overall classes : drinking, picking up phone, removing mask, resting chin on hand, rubbing eyes, touching glasses, touching hairs, touching keyboard, touching nose, touching phone, wearing mask
-      * Touching classes : picking up phone, resting chin on hand, rubbing eyes, touching hairs, touching nose
+      * Touching actions : picking up phone, resting chin on hand, rubbing eyes, touching hairs, touching nose
         
     
 * **Action Classification Network**
@@ -144,9 +144,9 @@ $ pip install -r requirements.txt
       * Geforce GTX 960 4GB
       * Intel(R) Core i7-6700 CPU 3.40GHz
       * OS : Linux / Windows
-        <br>
+<br>
 
-## Experiment Results
+## Experimental Results
 
 **Confusion matrix : binary-class**
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
@@ -157,10 +157,10 @@ $ pip install -r requirements.txt
 <br>
 
 
-## Contact for Data Donation 
+## How to donate your data
 
-* For more robust DONT, we need more data from different environments and persons. 
-  If you want to donate your data, please send it to namkugkim@gmail.com. Your privacy will be protected, as strong as possible.
+* For more robust model for DONT, we need more data from different environments and people. 
+  If you want to donate your data, please send it to namkugkim@gmail.com. Your privacy will be strictly protected, as strong as possible.
   <br>
 
 
@@ -179,6 +179,6 @@ $ pip install -r requirements.txt
 * Artificial Neural Network and GUI development
   * Sungman Cho(dev.sungman@gmail.com), Minjee Kim(minjeekim00@gmail.com)
 * Data acquisition and annotation
-  * Joonmyeong Choi(jm5901@gmail.com), Taehyung Kim(kimtaehyeong62@gmail.com), Juyoung Park(godoctorsam@gmail.com)
-* Management: Prof. Namkug Kim(namkugkim@gmail.com)
-* Data support : 37 MI2RL researchers, Prof. Dongwoo Seo(AMC), Prof. Namkug Kim(AMC & Univ. of Ulsan), Prof. Sunjin Lim(SNU)
+  * Dr. Joonmyeong Choi(jm5901@gmail.com), Taehyung Kim(kimtaehyeong62@gmail.com), Juyoung Park(godoctorsam@gmail.com)
+* General Management: Prof. Namkug Kim(namkugkim@gmail.com)
+* Data provider : 37 MI2RL researchers, Prof. Dong-woo Seo(Dept. of Emergency Medicine at AMC), Prof. Namkug Kim(Dept. of Radiology at AMC), Prof. Sunjin Lim(SNU Dental Hospital)
