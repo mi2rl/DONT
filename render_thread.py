@@ -73,5 +73,3 @@ class RenderThread(QThread):
     
     def exit(self, bool_flag):
         self.exitFlag = True
-        
-

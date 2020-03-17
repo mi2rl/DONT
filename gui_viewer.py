@@ -1,5 +1,5 @@
 '''
-##### DO Not Touch your face ver.0.2.1
+##### DO Not Touch your face ver.0.2
 
 ### Medical Imaging & Intelligent Reality Lab (MI2RL) @ Asan Medical Center(AMC)
 # MI2RL website : https://www.mi2rl.co/
@@ -35,11 +35,13 @@ from render_thread import RenderThread
 
 ### For viewing GUI
 class GUIViewer(QtWidgets.QWidget):
+
     def __init__(self):
         super().__init__()
         
         self.initUI()
-        #self.position = self._get_location()
+        self.position = self._get_location()
+        self.language = 'korean'
         
         # TODO : connect ConfigViewer to main GUIviewer
         self.config_window = ConfigboxViewer()
@@ -49,8 +51,9 @@ class GUIViewer(QtWidgets.QWidget):
         self.render_thread = RenderThread(self)
         self.render_thread.action_result.connect(self.update_touching_status)
         self.render_thread.changePixmap.connect(self.setImage)
-
+        
         self.render_thread.start()
+
         
     # GUI Position Setting
     def _get_location(self):
@@ -73,6 +76,8 @@ class GUIViewer(QtWidgets.QWidget):
 
         ### Button Layout. 
         #self.config_btn = QPushButton('설정')
+        self.language_cb = QCheckBox('Translated in English', self)
+        self.language_cb.stateChanged.connect(self.check_language)
         self.view_btn = QPushButton('카메라')
         self.start_btn = QPushButton('시작')
         self.pause_btn = QPushButton('중지')
@@ -85,6 +90,7 @@ class GUIViewer(QtWidgets.QWidget):
         ### 
         
         v_layout = QtWidgets.QVBoxLayout()
+        v_layout.addWidget(self.language_cb)
         v_layout.addWidget(self.status_label)
         v_layout.addWidget(self.touching_status)
         h_layout = QtWidgets.QHBoxLayout()
@@ -95,11 +101,37 @@ class GUIViewer(QtWidgets.QWidget):
         v_layout.addLayout(h_layout)
         self.setLayout(v_layout)
         
-        #self.setGeometry(1440, 1030, 500, 50)
+        self.setGeometry(1440, 1030, 500, 50)
 
-        self.setWindowTitle('DONT (20.03.12. ver.0.2.1)')
+        self.setWindowTitle('DONT (20.03.17. ver.0.3)')
         
+    def check_language(self):
+        if self.language is 'korean':
+            self.language = 'english'
+
+            if self.render_thread.status is True:
+                self.status_label.setText('Action Recognition Mode : OFF')
+            else:
+                self.status_label.setText('Action Recognition Mode : ON')
+
+            self.touching_status.setText('Alarm : ')
+
+            self.view_btn.setText('Camera')
+            self.start_btn.setText('Start')
+            self.pause_btn.setText('Pause')
+        else:
+            self.language = 'korean'
+            if self.render_thread.status is True:
+                self.status_label.setText('행동 인식 기능 : 꺼짐')
+            else:
+                self.status_label.setText('행동 인식 기능 : 켜짐')
+            self.touching_status.setText('알림 : ')
+
+            self.view_btn.setText('카메라')
+            self.start_btn.setText('시작')
+            self.pause_btn.setText('중지')
         
+
     def config_clicked(self):
         self.config_window.showModal()
 
@@ -107,19 +139,34 @@ class GUIViewer(QtWidgets.QWidget):
         self.video_viewer.showModal()
 
     def start_clicked(self):
-        self.status_label.setText('행동 인식 기능: 켜짐')
+        if self.language is 'korean':
+            self.status_label.setText('행동 인식 기능: 켜짐')
+        else:
+            self.status_label.setText('Action Recognition Mode : ON')
         self.render_thread.setStatus(False) 
 
         
     def pause_clicked(self):
-        self.status_label.setText('행동 인식 기능: 꺼짐')
+        if self.language is 'korean':
+            self.status_label.setText('행동 인식 기능: 꺼짐')
+            self.touching_status.setText('알림 : ')
+        else:
+            self.status_label.setText('Action Recognition Mode : OFF')
+            self.touching_status.setText('Alarm : ')
         
         self.render_thread.start()
         self.render_thread.setStatus(True)
 
+
     def closeEvent(self, event):
-        reply = QMessageBox.question(self, '닫기', '프로그램을 종료하시겠습니까?',
-                    QMessageBox.Yes | QMessageBox.No)
+        
+        if self.language is 'korean':
+            reply = QMessageBox.question(self, '닫기', '프로그램을 종료하시겠습니까?',
+                        QMessageBox.Yes | QMessageBox.No)
+        else:
+            reply = QMessageBox.question(self, 'Confirmation', 'Are tou sure you want to exit?',
+                        QMessageBox.Yes | QMessageBox.No)
+
         
         if reply == QMessageBox.Yes:
             self.render_thread.exit(True)
@@ -129,6 +176,7 @@ class GUIViewer(QtWidgets.QWidget):
 
         else:
             event.ignore()
+    
 
     @pyqtSlot(QImage)
     def setImage(self, image):
@@ -137,7 +185,12 @@ class GUIViewer(QtWidgets.QWidget):
 
     @pyqtSlot(str)
     def update_touching_status(self, message):
-        self.touching_status.setText('알림 : {}'.format(message))
+        if self.language is 'korean':
+            self.touching_status.setText('알림 : {}'.format(message))
+        else:
+            if message == '얼굴을 만지지 마세요 !':
+                message = 'DO Not Touch your face !'
+            self.touching_status.setText('Alarm : {}'.format(message))
 
 ### For viewing webCAM
 class VideoViewer(QDialog):
@@ -157,7 +210,7 @@ class VideoViewer(QDialog):
         v_layout.addLayout(h_layout)
         self.setLayout(v_layout)
 
-        #self.setGeometry(1440, 655, 480, 320)
+        self.setGeometry(1440, 655, 480, 320)
 
     def showModal(self):
         return super().exec_()
@@ -222,7 +275,7 @@ class ConfigboxViewer(QDialog):
         self.setLayout(v_layout)
 
         #self.setGeometry(1295, 660, 140, 450)
-		#self.setGeometry(1350, 850, 140, 50)
+        self.setGeometry(1350, 850, 140, 50)
 
     def check_translate_korean(self):
         if self.language is 'english':
