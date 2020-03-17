@@ -10,20 +10,19 @@
 
 # DO Not Touch your face (DONT)
 
-* Download link (executable file)  : https://drive.google.com/open?id=1owgC56KuQbNRNkF3gEJ7_52jhjeLmqFV
+* Download link (executable file)  : https://www.dropbox.com/s/rhehe3lvq1wqbjv/dont-release.ver.0.2.1.zip?dl=0
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 * Pre-trained network is available (weights folder)  
 * Demo video  : https://youtu.be/Yn7jqsNAmNk
+* Caution - This program works smoothly at a speed of 0.08 sec when there is a GPU with GTX960 or higher. In the case of a CPU environment, there is a lack of optimization, so it runs at a speed of 1.5 sec. Therefore, a slowdown may occur in notebooks with insufficient GPU performance.
 
 <br>
 
 
 
-## NEWS (12.03.20) : ver.0.2.1
+## NEWS (20.03.17) : DONT/WASH ver.0.3
 
-* Released an executable file for Windows 10 32bit/64bit
-
-* Fixed minor bugs  (thread termination issue)
+* Update English Mode
 
 * TO DO:
 
@@ -37,7 +36,7 @@
   
   * Try video clips from ceiling-mounted security cameras
   
-  * Develop a lightweight model for mobile phones
+  * Develop a lightweight model for mobile phones, CPU-only machine
 
 <br>
 
@@ -74,18 +73,17 @@ $ pip install -r requirements.txt
 
 * GUI Window  
 
-  <p align="center"><img src='./imgs/GUI.png' width="500" height="139"></p><br>  
-* Run/pause the classifier by '시작'/'중지' button
+  <p align="center"><img src='./imgs/GUI.png' width="50%" height="50%"></p><br>  
+  * Run/pause the classifier by 'Start'/'Pause' button
+    
+    * The result from action classifier will be shown 
+    
+  * Switch ON monitoring mode using 'Camera' button   
+  <br>
   
-* The result from action classifier will be shown 
-  
-* Change an option using '설정' button (To be updated)
-    * '알림: ' shows a reconized action
-* Switch ON monitoring mode using '카메라' button   
-
 * Run the Windows Software using EXE file
 
-  * Unzip a downloaded file, then run "DONE.exe"
+  * Unzip a downloaded file, then run "DONT.exe"
 
     <p align="center"><img src='./imgs/screenshot.png' width="80%" height="80%"></p><br>  
 
@@ -142,35 +140,16 @@ $ pip install -r requirements.txt
           * CPU usage  ≈ 35%  
           * GPU memory usage ≈  1.1GB
             
-      
     * Minimum specification
-
-
-      * GPU : Geforce GTX 960 4GB
-      * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-      * OS : Linux / Windows  
-
-          * 0.07~0.085 sec on GPU
-          * GPU memory usage ≈ 1.1GB
-        * CPU inference mode added
-          * 1.4~1.5 sec on CPU
-          * CPU usage  ≈ 35%  
-
-    * Minimum requirements
-    
-      * GPU : Geforce GTX 960 4GB
-    
-      * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-    
-      * OS : Linux / Windows  
-
-<br>
+      * Geforce GTX 960 4GB
+      * Intel(R) Core i7-6700 CPU 3.40GHz
+      * OS : Linux / Windows
+        <br>
 
 ## Experiment Results
 
 **Confusion matrix : binary-class**
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
-
 ## Limitations
 
 * DONT began at 2020.03.05, and has been in the works for about a week. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
@@ -182,6 +161,7 @@ $ pip install -r requirements.txt
 
 * For more robust DONT, we need more data from different environments and persons. 
   If you want to donate your data, please send it to namkugkim@gmail.com. Your privacy will be protected, as strong as possible.
+  <br>
 
 
 ### Guideline for data donation
