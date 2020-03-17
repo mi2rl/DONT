@@ -10,7 +10,7 @@
 
 # DO Not Touch your face (DONT)
 
-* Download link (executable file)  : http://dont.mi2rl.co/dont-release.ver.0.3.zip
+* Download link for Windows OS (executable file)  : http://dont.mi2rl.co/dont-release.ver.0.3.zip
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 * Pre-trained network is available (weights folder)  
 * Demo video  : https://youtu.be/Yn7jqsNAmNk
