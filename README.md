@@ -9,7 +9,7 @@
 
 # 얼굴을 만지지 마세요 / 손씻으세요 (DO Not Touch your face / WASH your hand, DONT/WASH)
 
-* 실행파일 다운로드 링크 : http://dont.mi2rl.co/dont-release.ver.0.3.zip
+* 윈도우용 실행파일 다운로드 링크 : http://dont.mi2rl.co/dont-release.ver.0.3.zip
 * 이 프로그램은 세계적으로 대유행인 코로나-19(SARS-CoV-2)를 극복하기 위해 서울아산병원의 MI2RL 연구실에서 개발하였습니다.  
 * 사전학습된 신경망을 weights 폴더에 업로드 하였습니다. 필요하신 분들은 마음대로 쓰십시오.
 * 비디오 데모  : https://youtu.be/Yn7jqsNAmNk
