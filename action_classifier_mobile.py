@@ -44,8 +44,7 @@ class ActionClassifier:
         # b, c, w, h
         self.model = mobilenetv3_large()
 
-        #self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
-        self.device = 'cpu'
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.model.to(self.device)
         self.model.eval()
         
@@ -58,7 +57,6 @@ class ActionClassifier:
 
 
         self.temporal_batch_size = temporal_batch_size
-        #self.temporal_batch = torch.zeros((1, 3, img_size, img_size)) 
         self.temporal_batch = np.zeros((img_size, img_size, 3))
         self.transforms = T.Compose([
             T.Resize((img_size,img_size)),
@@ -87,7 +85,7 @@ class ActionClassifier:
                     start_time = time.time()
                     self.temporal_batch = self.temporal_batch.astype(np.uint8)
                     temporal_batch_img = Image.fromarray(self.temporal_batch)
-                    temporal_batch_img.save('dbg/{}.png'.format(self.tmp))
+                    #temporal_batch_img.save('dbg/{}.png'.format(self.tmp))
                     img_tensor = self.transforms(temporal_batch_img)
                     img_tensor = torch.unsqueeze(img_tensor, 0)
                     img_tensor = img_tensor.to(self.device)
@@ -96,7 +94,6 @@ class ActionClassifier:
                     
                     _, preds = outputs.max(1)
                     
-                    print(outputs[0][0], outputs[0][1])
                     self.pred = self.classes[preds.item()]
                     if (self.pred in self.touching_actions):
                         self.pred = '얼굴을 만지지 마세요 !'

@@ -14,16 +14,15 @@
 * DONT(R) was developed to overcome 2019 pandemic of SARS-CoV-2 in the world by MI2RL@Asan Medical Center, South Korea
 * Pre-trained network is available (weights folder)  
 * Demo video  : https://youtu.be/Yn7jqsNAmNk
-* Caution - This program works smoothly at a speed of 0.08 sec when there is a GPU with GTX960 or higher. In the case of a CPU environment, there is a lack of optimization, so it runs at a speed of 1.5 sec. Therefore, a slowdown may occur in notebooks with insufficient GPU performance.
 
 <br>
 
 
 
-## NEWS (20.03.17) : DONT/WASH ver.0.3
+## NEWS (20.03.30) : DONT/WASH ver.0.4
 
-* Update English Mode
-
+* **Add MobileNet version.**
+  * **Can recognize face-touching actions in 0.07 sec with Intel(R) Core i7-6700 CPU 3.40GHz or higher (92% accuracy)**
 * TO DO:
 
   * Upload a paper on Arxiv about this project
@@ -113,7 +112,8 @@ $ pip install -r requirements.txt
       * Touching actions : picking up phone, resting chin on hand, rubbing eyes, touching hairs, touching nose
         
     
-* **Action Classification Network**
+* **Action Classification Network (I3D / MobileNet3)**
+  
   * I3D Network (https://github.com/deepmind/kinetics-i3d)   
     * Training phase
         * The number of  frames in each stack for 3D CNN : 16
@@ -124,35 +124,62 @@ $ pip install -r requirements.txt
         
     * Inference Phase
       * The number of  frames in each stack for 3D CNN : 24
-        
+    
+  * MobileNet3 (https://github.com/d-li14/mobilenetv3.pytorch)
+  
+    * Training phase
+  
+      * The number of frames in each stack for CNN : 3
+  
+        * Make 3 channel image as following time interval (3, 5, 7, 9, 11, 13, 15)
+  
+        * Each time interval, we make 20,000 images. So, the number of training images are 280,000. 
+  
+          <img src='./imgs/mobilenet_training_images.png' width="100%" height="100%"><br>
+  
+      * Datset configuration
+  
+        <br>
+  
+        <img src='./imgs/mobilenet.png' width="100%" height="100%"><br>
+  
+      * Inference Phase
+  
+        * Time interval (stride): 3 frame
   
 * **H/W specification**
 
     * Test specification.
-      
       * GPU : Geforce GTX 960 4GB
         * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
         * OS : Linux Ubuntu 18.04
-        * Inference
-        
+        * Inference 
+        * I3D Network
           * 0.07~0.085 sec on GPU
-          * 1.4~1.5 sec on CPU
-          * CPU usage  ≈ 35%  
-          * GPU memory usage ≈  1.1GB
-      
+            * 1.4~1.5 sec on CPU
+            * CPU usage  ≈ 35%  
+            * GPU memory usage ≈  1.1GB
+          * MobileNet v3
+            * 0.03~0.04 sec on GPU
+            * 0.07~0.09 sec on CPU
+            * CPU usage ≈ 4%
+            * GPU memory usage ≈ 520MB
+              
     * Minimum specification
       * Geforce GTX 960 4GB
       * Intel(R) Core i7-6700 CPU 3.40GHz
       * OS : Linux / Windows
-<br>
+    <br>
 
 ## Experimental Results
 
 **Confusion matrix : binary-class**
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p><br>
+<br>
+
 ## Limitations
 
-* DONT began at 2020.03.05, and has been in the works for about a week. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
+* DONT began at 2020.03.05, and has been in the works for about few weeks. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
 
 <br>
 
