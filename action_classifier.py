@@ -37,16 +37,28 @@ class ActionClassifier:
     def __init__(self, model_path, temporal_batch_size=24, img_size=224):
         
         
+        ### Multi-class
         # drinking, touching_phone, touching_keyboard
         self.classes = ['drinking', 'picking_up_phone', 'removing_mask',
                         'resting_chin_on_hand', 'rubbing_eyes', 'touching_glasses',
                         'touching_hairs', 'touching_keyboard', 'touching_nose', 
                         'touching_phone', 'wearing_mask']
+        '''
+        self.classes = ['drinking', 'others', 'picking_up_phone', 'removing_mask',
+                        'resting_chin_on_hand', 'rubbing_eyes', 'touching_glasses',
+                        'touching_hairs', 'touching_nose', 
+                        'touching_phone', 'wearing_mask']
+        '''
         
         # define action
         self.touching_actions = ['picking_up_phone', 'resting_chin_on_hand', 'rubbing_eyes', 'touching_hairs',
                                     'touching_nose']
 
+        '''
+        ### Binary-class
+        self.classes = ['non-touching', 'touching']
+        self.touching_actions = ['touching']
+        '''
 
         # b, c, w, h
         self.model = I3D(num_classes=400, modality='rgb')
@@ -59,7 +71,7 @@ class ActionClassifier:
         self.model.eval()
         
         if self.device is 'cuda':
-            state_dict = self._change_key(torch.load(model_path))
+            state_dict = self._change_key(torch.load(model_path, map_location='cuda:0'))
         else:
             state_dict = self._change_key(torch.load(model_path, map_location=torch.device('cpu')))
         self.model.load_state_dict(state_dict)
@@ -119,6 +131,7 @@ class ActionClassifier:
              
             self.pred = self.classes[int(top_idx[0,0].data.numpy())]
             self.score = top_val[0,0].data.numpy()
+            print(self.pred, self.score)
             if (self.pred in self.touching_actions) & (self.score > 0.9) :
                 self.pred = '얼굴을 만지지 마세요 !'
             else:

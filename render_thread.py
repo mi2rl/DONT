@@ -31,12 +31,18 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
-from action_classifier import ActionClassifier
+#from action_classifier import ActionClassifier
+from action_classifier_mobile import ActionClassifier
+
+import time
 
 class RenderThread(QThread):
     status = None
     exitFlag = False
-    action_classifier = ActionClassifier(model_path='weights/i3d_rgb_multi_class.pth')
+    #action_classifier = ActionClassifier(model_path='weights/i3d_rgb_multi_class_new.pth')
+    #action_classifier = ActionClassifier(model_path='weights/i3d_rgb_multi_class.pth')
+    action_classifier = ActionClassifier(model_path='weights/mobilenet_v3-173-best.pth')
+
     changePixmap = pyqtSignal(QImage)
     
     action_result = pyqtSignal(str)
@@ -73,3 +79,5 @@ class RenderThread(QThread):
     
     def exit(self, bool_flag):
         self.exitFlag = True
+        
+
