@@ -15,10 +15,10 @@
 * 비디오 데모  : https://youtu.be/Yn7jqsNAmNk
 * 주의 - 본 프로그램은 GTX 960 이상(게임용)의 GPU가 있을 때 0.08sec 의 속도로 원활하게 작동합니다. CPU 환경의 경우 최적화가 부족해서 1.5sec의 속도로 돌아가기 때문에, GPU 성능이 부족한 노트북에서는 끊김현상이 발생할 수 있습니다. <br>
 
-## 1. NEWS (20.03.17) : DONT/WASH ver.0.3
+## 1. NEWS (20.03.30) : DONT/WASH ver.0.4
 
-* 영어 번역모드가 추가되었습니다.
-* 프로그램 상단의 Translated in English 를 체크하면, 영어 모드로 동작하게됩니다. 
+* MobileNet 버전이 추가되었습니다.
+  * Intel(R) Core i7-6700 CPU 3.40GHz 의 사양에서 92%의 정확도로 0.07초 이내에 얼굴을 만지는 액션을 인식할 수 있습니다. 
 * 해야할일 (TO DO):
 
   * 관련 논문을 작성할 예정입니다.
@@ -45,6 +45,7 @@ $ conda activate [your virtual environment name]
 
 # 코드 실행에 필요한 파일들을 설치합니다. 
 $ pip install torch==1.2.0+cu92 torchvision==0.4.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
+
 $ pip install -r requirements.txt
 ```
 <br>
@@ -108,6 +109,29 @@ $ pip install -r requirements.txt
         
     * 추론과정
       * 3D CNN에서 사용되는 스택당 이미지 갯수 : 24
+    
+  * MobileNet3 (https://github.com/d-li14/mobilenetv3.pytorch)
+
+    * 학습과정
+
+      * 3, 5, 7, 9, 11, 13, 15 프레임 간격을 사용해서 3채널 이미지를 생성
+
+      * 각 간격마다 20,000장의 이미지를 만들어서, 총합 280,000장의 학습 이미지를 생성
+
+        <img src='./imgs/mobilenet_training_images.png' width="100%" height="100%">
+
+        <br>
+
+      * 데이터셋 구성
+        <br>
+
+        <img src='./imgs/mobilenet.png' width="100%" height="100%"><br>
+
+    * 추론과정
+
+      * 프레임 간격 : 3 프레임
+
+      
 
 * **하드웨어 환경**
 
@@ -116,35 +140,38 @@ $ pip install -r requirements.txt
       * GPU : Geforce GTX 960 4GB
         * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
         * OS : Linux Ubuntu 18.04
-        * GPU 추론 속도 및 자원 사용
+        * 추론과정
+          * I3D Network
         
-          * 0.07~0.085 sec on GPU
-          * GPU memory usage ≈ 1.1GB
-        * CPU 추론 속도 및 자원 사용
-          * 1.4~1.5 sec on CPU
-          * CPU usage  ≈ 35%  
+            * 0.07~0.085 sec on GPU
+              * 1.4~1.5 sec on CPU
+              * CPU usage  ≈ 35%  
+              * GPU memory usage ≈  1.1GB
+          * MobileNet v3
+            * 0.03~0.04 sec on GPU
+            * 0.07~0.09 sec on CPU
+            * CPU usage ≈ 4%
+            * GPU memory usage ≈ 520MB
       
     * 최소사양
-    
+
       * GPU : Geforce GTX 960 4GB
-    
+
       * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
-    
+
       * OS : Linux / Windows  
-<br>
+    <br>
 
 ## 5. 실험결과
 
-* 11가지 얼굴 만지는 동작에 대한 분류성능평가(Confusion Matrix)
-  * 11가지 동작 : 물 마시기, 전화 하기, 마스크 벗기, 턱 괴기, 눈 비비기, 안경 만지기, 머리 만지기, 키보드 사용하기, 코 만지기, 핸드폰 만지기, 마스크 쓰기
-  * TBA
+* **Confusion matrix : binary-class**
 
 <p align="center"><img src='./imgs/result_confusion_binary.png' width="400" height="400"></p>
 <br>
 
 ## 6. 한계점
 
-* 이 프로젝트는 2020.03.05 부터 시작되어, 이제 약 v.0.2 입니다. **높은 성능의 프로그램을 만드는 것 보다 빠른 배포를 통한 인공지능 Society의 공동의 노력을 촉구하는 것이 SARS-CoV-2 확산 방지를 위하여 더 바람직**할 것으로 판단하여, 아직 부족함에도 불구하고 공개를 진행하게 되었습니다. 많은 버그 리포팅 및 협력 부탁드립니다.
+* 이 프로젝트는 2020.03.05 부터 시작되었습니다. **높은 성능의 프로그램을 만드는 것 보다 빠른 배포를 통한 인공지능 Society의 공동의 노력을 촉구하는 것이 SARS-CoV-2 확산 방지를 위하여 더 바람직**할 것으로 판단하여, 아직 부족함에도 불구하고 공개를 진행하게 되었습니다. 많은 버그 리포팅 및 협력 부탁드립니다.
 * 저작권은 MIT license를 따르려 합니다. 원하시는데로 가져가셔서 쓰시거나 아이디어를 주십시오.
 
 

@@ -154,17 +154,17 @@ $ pip install -r requirements.txt
         * CPU : Intel(R) Core i7-6700 CPU 3.40GHz 
         * OS : Linux Ubuntu 18.04
         * Inference 
-        * I3D Network
-          * 0.07~0.085 sec on GPU
-            * 1.4~1.5 sec on CPU
-            * CPU usage  ≈ 35%  
-            * GPU memory usage ≈  1.1GB
+          * I3D Network
+            * 0.07~0.085 sec on GPU
+              * 1.4~1.5 sec on CPU
+              * CPU usage  ≈ 35%  
+              * GPU memory usage ≈  1.1GB
           * MobileNet v3
             * 0.03~0.04 sec on GPU
             * 0.07~0.09 sec on CPU
             * CPU usage ≈ 4%
             * GPU memory usage ≈ 520MB
-              
+      
     * Minimum specification
       * Geforce GTX 960 4GB
       * Intel(R) Core i7-6700 CPU 3.40GHz
@@ -179,7 +179,7 @@ $ pip install -r requirements.txt
 
 ## Limitations
 
-* DONT began at 2020.03.05, and has been in the works for about few weeks. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
+* DONT began at 2020.03.05. We decided that it would be more desirable to call for joint efforts through faster release than creating high-performance programs, so we decided to proceed with the disclosure despite the lack of progress.
 
 <br>
 
