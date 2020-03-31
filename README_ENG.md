@@ -19,7 +19,7 @@
 
 
 
-## NEWS (20.03.30) : DONT/WASH ver.0.4
+## NEWS (20.03.30) : DONT ver.0.4
 
 * **Add MobileNet version.**
   * **Can recognize face-touching actions in 0.07 sec with Intel(R) Core i7-6700 CPU 3.40GHz or higher (92% accuracy)**

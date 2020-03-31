@@ -7,7 +7,7 @@
 <p align="center"><img src='./imgs/MI2RL_logo.png' width="440" height="150"></p>
 <br>
 
-# 얼굴을 만지지 마세요 / 손씻으세요 (DO Not Touch your face / WASH your hand, DONT/WASH)
+# 얼굴을 만지지 마세요 (DO Not Touch your face , DONT)
 
 * 윈도우용 실행파일 다운로드 링크 : http://dont.mi2rl.co/dont-release.ver.0.3.zip
 * 이 프로그램은 세계적으로 대유행인 코로나-19(SARS-CoV-2)를 극복하기 위해 서울아산병원의 MI2RL 연구실에서 개발하였습니다.  
@@ -15,7 +15,7 @@
 * 비디오 데모  : https://youtu.be/Yn7jqsNAmNk
 * 주의 - 본 프로그램은 GTX 960 이상(게임용)의 GPU가 있을 때 0.08sec 의 속도로 원활하게 작동합니다. CPU 환경의 경우 최적화가 부족해서 1.5sec의 속도로 돌아가기 때문에, GPU 성능이 부족한 노트북에서는 끊김현상이 발생할 수 있습니다. <br>
 
-## 1. NEWS (20.03.30) : DONT/WASH ver.0.4
+## 1. NEWS (20.03.30) : DONT ver.0.4
 
 * MobileNet 버전이 추가되었습니다.
   * Intel(R) Core i7-6700 CPU 3.40GHz 의 사양에서 92%의 정확도로 0.07초 이내에 얼굴을 만지는 액션을 인식할 수 있습니다. 
