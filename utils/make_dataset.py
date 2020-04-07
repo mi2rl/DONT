@@ -43,7 +43,7 @@ def parse_arguments(argv):
     parser.add_argument('--time_interval', type=int, default=3)
 
     parser.add_argument('--num', type=int, default=100)
-    parser.add_argument('--save_path', type=str, default='~/HDD/sdb/datasets/4_DONT/test')
+    parser.add_argument('--save_path', type=str, default='/home/sungman/projects/nas100/sungman.cho/datasets/1_dont/datasets/train')
     parser.add_argument('--mode', type=str, default=None)
 
     return parser.parse_args()
@@ -89,6 +89,9 @@ def main(args):
                 for j, action_period in enumerate(action_period_list):
                     action_start, action_end = int(action_period.split('-')[0]), int(action_period.split('-')[1])
                     
+                    action_start += 16
+                    action_start -= 16
+
                     if action_end - action_start > (args.time_interval*3):
                         # 3.4. 임의의 프레임을 설정한 후, 3채널로 만들기 위한 그룹을 만들어줌. 
                         rand_frame = random.randrange(action_start, action_end-(args.time_interval*2))
